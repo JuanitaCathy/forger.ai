@@ -3,6 +3,7 @@ import './globals.css';
 import { Inter,  Calistoga } from "next/font/google";
 import { Providers } from './provider';
 import { Header } from './header';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+      <head>
+        <link rel="icon" href="/ForgeR (4).svg" />
+      </head>
         <body className={`${inter.className}`}>
          <Providers>
             <Header />
