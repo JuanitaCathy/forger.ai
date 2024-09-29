@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Inter,  Calistoga } from "next/font/google";
 import { Providers } from './provider';
 import { Header } from './header';
+
+const inter = Inter({ subsets: ["latin"] });
 
 
 export const metadata: Metadata = {
@@ -18,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body>
+        <body className={`${inter.className}`}>
          <Providers>
             <Header />
             <div className="container mx-auto">{children}</div>
