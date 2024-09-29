@@ -199,8 +199,13 @@ export default function UrlEmailPage() {
                 </button>
               </div>
        
+              <button
+                className="flex items-center text-pink-600 font-semibold"
+                title="Upload Bulk Recruiter Data"
+              >
                 <FontAwesomeIcon icon={faStar} className="h-5 w-5 mr-1" />
                 Premium Feature
+             </button>
             </div>
 
             {/* Send Email button disabled until email is generated */}
