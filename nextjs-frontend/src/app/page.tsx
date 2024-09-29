@@ -24,7 +24,7 @@ export default function LandingPage() {
 
             {/* Call to Action Button */}
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link href="/browse" passHref>
+              <Link href="/job_email" passHref>
                 <button className="relative z-20 rounded-md bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-3 text-lg font-semibold text-white shadow-md hover:bg-gradient-to-l hover:from-gray-900 hover:to-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 focus:ring-offset-gray-50 transition-all duration-300 ease-in-out">
                   Start Crafting
                 </button>

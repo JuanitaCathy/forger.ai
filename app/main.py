@@ -1,5 +1,4 @@
-# backend/main.py
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from pydantic import BaseModel
 from chains import Chain
 from portfolio import Portfolio
@@ -41,3 +40,15 @@ async def generate_email(request: URLRequest):
             raise HTTPException(status_code=404, detail="No jobs found.")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An Error Occurred: {e}")
+
+
+# API to upload portfolio CSV
+@app.post("/upload-portfolio")
+async def upload_portfolio(file: UploadFile = File(...)):
+    try:
+        content = await file.read()  # Read file content as bytes
+        content = content.decode("utf-8")  # Convert to string
+        portfolio.load_portfolio(csv_content=content)
+        return {"message": "Portfolio uploaded successfully!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred while uploading the portfolio: {e}")
