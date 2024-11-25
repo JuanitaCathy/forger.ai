@@ -29,7 +29,7 @@ Hey there! Welcome to **Forger AI**, a web application allows users to generate 
 - **Next.js**: For building intuitive interfaces.
 - **Langchain**: For managing language models, scraping(webbaseloader) and prompts.
 - **Llama**: For generating personalized email content.
-- **Groqcloud**: For data handling and storage (add a brief description if available).
+- **Groqcloud**: For data handling and storage.
 - **SendGrid API**: For sending emails to recipients.
 - **FastAPI**: For building the backend API.
 
